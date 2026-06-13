@@ -156,25 +156,25 @@
             <div class="result-grid">
                 <article class="metric-card highlight">
                     <span>LSTM Accuracy</span>
-                    <strong>0.9265</strong>
-                    <p>테스트 데이터 기준 정확도</p>
+                    <strong>0.9338</strong>
+                    <p>테스트 데이터 기준 전체 정확도</p>
                 </article>
 
                 <article class="metric-card highlight">
                     <span>LSTM Macro F1</span>
-                    <strong>0.9280</strong>
+                    <strong>0.9348</strong>
                     <p>클래스 균형 성능 지표</p>
                 </article>
 
                 <article class="metric-card">
                     <span>Baseline Macro F1</span>
-                    <strong>0.8504</strong>
+                    <strong>0.8503</strong>
                     <p>Persistence Baseline 기준 성능</p>
                 </article>
 
                 <article class="metric-card">
                     <span>Macro F1 차이</span>
-                    <strong>+0.0776</strong>
+                    <strong>+0.0845</strong>
                     <p>LSTM - Baseline</p>
                 </article>
             </div>
@@ -193,15 +193,21 @@
                     <tbody>
                     <tr>
                         <td>LSTM</td>
-                        <td>0.9265</td>
-                        <td>0.9280</td>
+                        <td>0.9338</td>
+                        <td>0.9348</td>
                         <td>시계열 패턴 학습 기반 최종 모델</td>
                     </tr>
                     <tr>
                         <td>Persistence Baseline</td>
                         <td>0.8456</td>
-                        <td>0.8504</td>
+                        <td>0.8503</td>
                         <td>이전 달 상태가 유지된다고 가정한 기준 모델</td>
+                    </tr>
+                    <tr>
+                        <td>성능 차이</td>
+                        <td>+0.0882</td>
+                        <td>+0.0845</td>
+                        <td>LSTM 모델이 baseline보다 높은 성능을 보임</td>
                     </tr>
                     </tbody>
                 </table>
@@ -212,24 +218,36 @@
             <div class="section-heading">
                 <span>PREVIEW</span>
                 <h2>실행 결과 미리보기</h2>
-                <p>실제 결과 이미지는 실행 결과 메뉴에 자세히 정리할 예정입니다.</p>
+                <p>Colab 실행 결과에서 생성된 주요 평가 그래프를 미리 확인할 수 있습니다.</p>
             </div>
 
             <div class="preview-grid">
                 <div class="preview-card">
-                    <div class="image-placeholder">Confusion Matrix</div>
+                    <img 
+                        src="images/home_confusion_matrix.png" 
+                        alt="Confusion Matrix" 
+                        class="preview-image"
+                    >
                     <h3>혼동 행렬</h3>
-                    <p>라니냐·중립·엘니뇨 클래스별 예측 결과를 확인했습니다.</p>
+                    <p>라니냐·중립·엘니뇨 클래스별 실제값과 예측값의 분포를 확인했습니다.</p>
                 </div>
 
                 <div class="preview-card">
-                    <div class="image-placeholder">Actual vs Predicted</div>
+                    <img 
+                        src="images/home_actual_vs_predicted.png" 
+                        alt="Actual vs Predicted ENSO State" 
+                        class="preview-image"
+                    >
                     <h3>실제값-예측값 비교</h3>
-                    <p>테스트 기간 동안 실제 ENSO 상태와 모델 예측 결과를 비교했습니다.</p>
+                    <p>테스트 기간 동안 실제 ENSO 상태와 LSTM 모델의 예측 결과를 비교했습니다.</p>
                 </div>
 
                 <div class="preview-card">
-                    <div class="image-placeholder">Baseline Comparison</div>
+                    <img 
+                        src="images/home_lstm_vs_persistence_baseline.png" 
+                        alt="LSTM vs Persistence Baseline" 
+                        class="preview-image"
+                    >
                     <h3>Baseline 비교</h3>
                     <p>LSTM 모델이 단순 지속성 예측보다 높은 성능을 보이는지 검증했습니다.</p>
                 </div>
@@ -1261,13 +1279,13 @@
             <div class="result-metric-grid">
                 <article class="metric-card highlight">
                     <span>LSTM Accuracy</span>
-                    <strong>0.9265</strong>
+                    <strong>0.9338</strong>
                     <p>테스트 데이터 기준 전체 정확도</p>
                 </article>
 
                 <article class="metric-card highlight">
                     <span>LSTM Macro F1</span>
-                    <strong>0.9280</strong>
+                    <strong>0.9348</strong>
                     <p>라니냐·중립·엘니뇨 균형 성능</p>
                 </article>
 
@@ -1279,7 +1297,7 @@
 
                 <article class="metric-card">
                     <span>Baseline Macro F1</span>
-                    <strong>0.8504</strong>
+                    <strong>0.8503</strong>
                     <p>단순 지속성 예측 기준 성능</p>
                 </article>
             </div>
@@ -1297,20 +1315,20 @@
                     <tbody>
                         <tr>
                             <td>LSTM</td>
-                            <td>0.9265</td>
-                            <td>0.9280</td>
+                            <td>0.9338</td>
+                            <td>0.9348</td>
                             <td>과거 Niño 지표와 ONI-like 흐름을 학습한 최종 딥러닝 모델</td>
                         </tr>
                         <tr>
                             <td>Persistence Baseline</td>
                             <td>0.8456</td>
-                            <td>0.8504</td>
+                            <td>0.8503</td>
                             <td>이전 달 ENSO 상태가 다음 달에도 유지된다고 가정한 기준 모델</td>
                         </tr>
                         <tr>
                             <td>성능 차이</td>
-                            <td>+0.0809</td>
-                            <td>+0.0776</td>
+                            <td>+0.0882</td>
+                            <td>+0.0845</td>
                             <td>LSTM 모델이 baseline보다 높은 성능을 보임</td>
                         </tr>
                     </tbody>
@@ -1515,7 +1533,7 @@
                         <li>Docker 기반 실행 환경 구성</li>
                     </ul>
 
-                    <a href="#" target="_blank" class="inline-link-button">GitHub에서 웹서비스 코드 보기</a>
+                    <a href="https://github.com/Lihard-XR/enso-lstm-forecast-dashboard" target="_blank" class="inline-link-button">GitHub에서 웹서비스 코드 보기</a>
                 </div>
             </div>
         </section>
