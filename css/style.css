@@ -2116,10 +2116,6 @@ main {
     .ai-check-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .ai-final-layout {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 640px) {
@@ -2180,10 +2176,6 @@ main {
 
     .ai-final-report h2 {
         font-size: 28px;
-    }
-
-    .ai-final-percent strong {
-        font-size: 46px;
     }
 }
 
