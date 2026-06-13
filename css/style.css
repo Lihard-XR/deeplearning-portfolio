@@ -2094,3 +2094,440 @@ main {
         font-size: 28px;
     }
 }
+
+/* =========================
+   GPU Training Environment
+========================= */
+
+.gpu-env-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.gpu-env-card {
+    padding: 24px;
+    border-radius: 22px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.gpu-env-card h3 {
+    margin: 0 0 14px;
+    color: var(--green-dark);
+    font-size: 22px;
+}
+
+.gpu-env-card ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #475467;
+    line-height: 1.85;
+}
+
+.gpu-env-card li::marker {
+    color: var(--green);
+}
+
+.gpu-env-card code {
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.gpu-screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.gpu-shot-card {
+    border-radius: 24px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+    overflow: hidden;
+}
+
+.gpu-shot {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--line);
+    background: #f8fafc;
+}
+
+.gpu-shot-card div {
+    padding: 22px;
+}
+
+.gpu-shot-card h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 21px;
+}
+
+.gpu-shot-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 980px) {
+    .gpu-env-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gpu-screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .gpu-shot {
+        height: 210px;
+    }
+
+    .gpu-env-card,
+    .gpu-shot-card div {
+        padding: 20px;
+    }
+}
+
+/* =========================
+   Role Page
+========================= */
+
+.role-section-page {
+    padding: 64px 0 90px;
+}
+
+.role-block {
+    margin-bottom: 76px;
+}
+
+.role-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.role-summary-grid article {
+    padding: 24px;
+    border-radius: 22px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.role-summary-grid strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--green-dark);
+    font-size: 16px;
+}
+
+.role-summary-grid p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+.role-notice {
+    padding: 24px;
+    border-radius: 22px;
+    background:
+        linear-gradient(135deg, rgba(69, 184, 134, 0.12), rgba(255, 255, 255, 1)),
+        #ffffff;
+    border: 1px solid rgba(69, 184, 134, 0.25);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.role-notice strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--green-dark);
+    font-size: 18px;
+}
+
+.role-notice p {
+    margin: 0;
+    color: #475467;
+    line-height: 1.8;
+}
+
+.role-contribution-card {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 26px;
+    align-items: stretch;
+}
+
+.contribution-main-number {
+    padding: 30px;
+    border-radius: 28px;
+    background: var(--green-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 14px 34px rgba(15, 75, 63, 0.18);
+}
+
+.contribution-main-number strong {
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.contribution-main-number span {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.contribution-main-text {
+    padding: 32px;
+    border-radius: 28px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.contribution-main-text h3 {
+    margin: 0 0 14px;
+    color: var(--navy);
+    font-size: 27px;
+    letter-spacing: -0.5px;
+}
+
+.contribution-main-text p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+.role-table-wrap {
+    overflow-x: auto;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.role-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 860px;
+}
+
+.role-table th,
+.role-table td {
+    padding: 17px 18px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.role-table th {
+    background: var(--green-soft);
+    color: var(--green-dark);
+    font-weight: 900;
+}
+
+.role-table td {
+    color: #344054;
+    line-height: 1.7;
+}
+
+.role-table td:first-child {
+    font-weight: 900;
+    color: var(--navy);
+    width: 190px;
+}
+
+.role-table td:last-child {
+    font-weight: 900;
+    color: var(--green-dark);
+    width: 120px;
+}
+
+.role-table tr:last-child td {
+    border-bottom: none;
+}
+
+.role-output-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.role-output-grid article {
+    padding: 26px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.role-output-grid span {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--green-soft);
+    color: var(--green-dark);
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.role-output-grid h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.role-output-grid p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.role-output-grid strong {
+    color: var(--green-dark);
+    font-size: 14px;
+}
+
+.collaboration-box {
+    padding: 34px;
+    border-radius: 28px;
+    background:
+        linear-gradient(135deg, rgba(69, 184, 134, 0.12), rgba(255, 255, 255, 1)),
+        #ffffff;
+    border: 1px solid rgba(69, 184, 134, 0.25);
+    box-shadow: var(--shadow);
+}
+
+.collaboration-box h3 {
+    margin: 0 0 16px;
+    color: var(--green-dark);
+    font-size: 27px;
+    letter-spacing: -0.5px;
+}
+
+.collaboration-box p {
+    margin: 0 0 14px;
+    color: #475467;
+    line-height: 1.85;
+}
+
+.collaboration-box p:last-child {
+    margin-bottom: 0;
+}
+
+.role-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.role-detail-grid article {
+    padding: 28px;
+    border-radius: 24px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+}
+
+.role-detail-grid h3 {
+    margin: 0 0 14px;
+    color: var(--green-dark);
+    font-size: 23px;
+}
+
+.role-detail-grid ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #475467;
+    line-height: 1.85;
+}
+
+.role-detail-grid li::marker {
+    color: var(--green);
+}
+
+.role-final-box {
+    padding: 42px;
+    border-radius: 30px;
+    background: var(--green-dark);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.role-final-box h2 {
+    margin: 0 0 18px;
+    font-size: 34px;
+    letter-spacing: -0.6px;
+}
+
+.role-final-box p {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.85;
+}
+
+.role-final-box p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 980px) {
+    .role-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .role-contribution-card {
+        grid-template-columns: 1fr;
+    }
+
+    .role-output-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .role-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .role-summary-grid,
+    .role-output-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .role-notice,
+    .collaboration-box,
+    .role-final-box,
+    .contribution-main-text {
+        padding: 26px;
+    }
+
+    .contribution-main-number strong {
+        font-size: 30px;
+    }
+
+    .role-final-box h2 {
+        font-size: 28px;
+    }
+}
