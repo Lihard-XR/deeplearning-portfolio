@@ -319,30 +319,6 @@
         </div>
 
         <div class="timeline">
-
-            <article class="timeline-item">
-                <div class="timeline-date">
-                    <span>06.03</span>
-                    <small>GPU 학습 환경</small>
-                </div>
-                <div class="timeline-content">
-                    <h3>WSL2 Ubuntu 및 TensorFlow GPU 학습 환경 구성</h3>
-                    <p>
-                        모델 학습 속도를 개선하고 실제 딥러닝 개발 환경에 가깝게 프로젝트를 진행하기 위해
-                        Windows 환경에서 WSL2 Ubuntu를 설치하고, Python 가상환경(.venv_gpu)을 구성했습니다.
-                        이후 TensorFlow에서 GPU가 정상적으로 인식되는지 확인한 뒤 LSTM 모델 학습을 GPU 환경에서 실행했습니다.
-                    </p>
-                    <ul>
-                        <li>WSL2 Ubuntu 24.04 기반 개발 환경 구성</li>
-                        <li>Python 가상환경 <code>.venv_gpu</code> 생성 및 패키지 설치</li>
-                        <li>TensorFlow 2.21.0 환경에서 GPU 인식 여부 확인</li>
-                        <li>NVIDIA GPU 사용 상태를 <code>nvidia-smi</code>로 확인</li>
-                        <li>LSTM 모델 학습 및 평가 스크립트를 GPU 환경에서 실행</li>
-                        <li>Colab 제출용 코드와 로컬 GPU 학습 환경을 분리하여 관리</li>
-                    </ul>
-                </div>
-            </article>
-
             <article class="timeline-item fixed">
                 <div class="timeline-date">
                     <span>04.30<br>~ 05.20</span>
@@ -621,19 +597,22 @@
             <article class="timeline-item">
                 <div class="timeline-date">
                     <span>06.03</span>
-                    <small>실행 환경</small>
+                    <small>GPU 학습 환경</small>
                 </div>
                 <div class="timeline-content">
-                    <h3>WSL 및 TensorFlow GPU 실행 환경 정리</h3>
+                    <h3>WSL2 Ubuntu 및 TensorFlow GPU 학습 환경 구성</h3>
                     <p>
-                        모델 학습 속도를 개선하기 위해 WSL Ubuntu 환경에서 TensorFlow GPU 실행 환경을 구성했습니다.
-                        GPU 인식 여부를 확인하고, 학습 스크립트와 API 서버가 정상 실행되는지 점검했습니다.
+                        모델 학습 속도를 개선하고 실제 딥러닝 개발 환경에 가깝게 프로젝트를 진행하기 위해
+                        Windows 환경에서 WSL2 Ubuntu를 설치하고, Python 가상환경(.venv_gpu)을 구성했습니다.
+                        이후 TensorFlow에서 GPU가 정상적으로 인식되는지 확인한 뒤 LSTM 모델 학습을 GPU 환경에서 실행했습니다.
                     </p>
                     <ul>
-                        <li>WSL Ubuntu 기반 개발 환경 구성</li>
-                        <li>TensorFlow GPU 인식 확인</li>
-                        <li>가상환경 구성 및 requirements 정리</li>
-                        <li>학습 스크립트 및 API 실행 테스트</li>
+                        <li>WSL2 Ubuntu 24.04 기반 개발 환경 구성</li>
+                        <li>Python 가상환경 <code>.venv_gpu</code> 생성 및 패키지 설치</li>
+                        <li>TensorFlow 2.21.0 환경에서 GPU 인식 여부 확인</li>
+                        <li>NVIDIA GPU 사용 상태를 <code>nvidia-smi</code>로 확인</li>
+                        <li>LSTM 모델 학습 및 평가 스크립트를 GPU 환경에서 실행</li>
+                        <li>Colab 제출용 코드와 로컬 GPU 학습 환경을 분리하여 관리</li>
                     </ul>
                 </div>
             </article>
@@ -2185,9 +2164,10 @@
             <span class="section-label">AI USAGE REPORT</span>
             <h2>AI 활용보고서</h2>
             <p>
-                본 페이지는 프로젝트를 진행하면서 생성형 AI를 어떤 목적으로 활용했는지,
-                어떤 부분에서 도움을 받았는지, 그리고 최종적으로 직접 판단하고 수정한 부분은 무엇인지 정리한 보고서입니다.
-                AI는 코드 작성과 문서 정리의 보조 도구로 활용했으며, 데이터 실행, 오류 확인, 결과 해석, 최종 제출 판단은 직접 수행했습니다.
+                본 페이지는 LSTM 기반 엘니뇨·라니냐 예측 프로젝트를 진행하면서
+                생성형 AI를 어떤 방식으로 보조적으로 활용했는지 정리한 보고서입니다.
+                프로젝트 주제 선정, 기본 아이디어 구성, 코드 실행, 오류 확인, 결과 해석, 최종 제출 자료 구성은 직접 수행했으며,
+                AI는 코드 흐름 정리, 주석 보완, 오류 해결 방향 검토, 문서 및 포트폴리오 구성 보조에 활용했습니다.
             </p>
         </div>
 
@@ -2196,9 +2176,9 @@
                 <span>OVERVIEW</span>
                 <h2>AI 활용 개요</h2>
                 <p>
-                    본 프로젝트에서는 ChatGPT를 활용하여 프로젝트 구조 정리, 코드 오류 해결 방향 검토,
-                    문서 표현 보완, 포트폴리오 구성 정리에 도움을 받았습니다.
-                    다만 AI가 제안한 내용을 그대로 사용하지 않고, 실제 실행 결과와 프로젝트 목적에 맞게 직접 검토하고 수정했습니다.
+                    본 프로젝트에서는 ChatGPT를 개발 보조 도구로 활용했습니다.
+                    AI는 아이디어를 대신 내거나 결과를 대신 판단하는 역할이 아니라,
+                    직접 진행한 작업을 정리하고 오류 해결 방향을 검토하며 문서 표현을 보완하는 역할로 사용했습니다.
                 </p>
             </div>
 
@@ -2209,15 +2189,15 @@
                 </article>
                 <article>
                     <strong>활용 목적</strong>
-                    <p>코드 구조화, 오류 해결, 문서 정리, 포트폴리오 구성 보조</p>
+                    <p>코드 흐름 정리, 주석 보완, 오류 원인 검토, 문서 구성 보조</p>
                 </article>
                 <article>
                     <strong>활용 범위</strong>
-                    <p>데이터 전처리, LSTM 모델 구현, 평가 지표 정리, 웹서비스 확장 방향 검토</p>
+                    <p>기획 정리, 전처리·모델 코드 설명, 평가 해석, 웹페이지 구성 보완</p>
                 </article>
                 <article>
                     <strong>최종 판단</strong>
-                    <p>실행 결과 확인, 모델 선택, 성능 해석, 제출 구성은 직접 수행</p>
+                    <p>실행 결과 확인, 성능 수치 검증, 제출 자료 구성은 직접 수행</p>
                 </article>
             </div>
         </section>
@@ -2232,127 +2212,407 @@
                 <h3>AI는 프로젝트를 대신 수행하기 위한 도구가 아니라, 개발 과정의 보조 도구로 활용했습니다.</h3>
                 <p>
                     프로젝트를 진행하면서 데이터 전처리, LSTM 모델 구성, 성능 평가, FastAPI 웹서비스 확장 등 여러 단계가 필요했습니다.
-                    이 과정에서 AI를 활용하여 코드 구조를 정리하고, 오류가 발생했을 때 원인을 추정하며,
-                    결과를 어떻게 해석하면 좋을지 검토했습니다.
+                    이 과정에서 AI를 활용하여 내가 구성한 코드 흐름을 더 보기 좋게 정리하고,
+                    오류가 발생했을 때 원인 후보와 확인 순서를 검토했습니다.
                 </p>
                 <p>
-                    특히 Colab 제출용 코드와 GitHub 추가 구현 코드를 분리하는 과정에서,
-                    어떤 내용을 채점용 노트북에 포함하고 어떤 내용을 추가 구현으로 정리해야 하는지 판단하는 데 도움을 받았습니다.
-                    하지만 실제 코드 실행, 결과 확인, 성능 수치 판단, 최종 파일 구성은 직접 수행했습니다.
+                    또한 Colab 제출용 코드와 GitHub 추가 구현 코드를 분리하는 과정에서
+                    어떤 내용을 제출용 노트북에 포함하고 어떤 내용을 추가 구현으로 정리할지 검토하는 데 도움을 받았습니다.
+                    다만 실제 코드 실행, 결과 확인, 성능 수치 판단, 최종 파일 구성은 직접 수행했습니다.
                 </p>
             </div>
         </section>
 
         <section class="ai-report-block">
             <div class="section-heading left-heading">
-                <span>USAGE BY STEP</span>
-                <h2>단계별 AI 활용 내용</h2>
+                <span>PROMPT LOG</span>
+                <h2>주요 프롬프트 및 AI 제공 결과물</h2>
+                <p>
+                    프로젝트 진행 중 사용한 주요 프롬프트를 활용 단계별로 분류했습니다.
+                    각 프롬프트에 따라 실제로 AI가 어떤 결과물을 제공했고
+                    그 결과물이 포트폴리오의 어느 부분에 반영되었는지 함께 정리했습니다.
+                </p>
             </div>
 
-            <div class="ai-step-list">
+            <div class="prompt-guide-box">
+                <strong>정리 기준</strong>
+                <p>
+                    직접 진행한 작업을 점검하고 코드 구조, 오류 해결 방향, 설명 문장, 포트폴리오 구성 보완 등으로 섹션을 분류하여 정리했습니다.
+                </p>
+            </div>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">01</div>
-                    <div class="ai-step-content">
-                        <h3>주제 선정 및 기획 단계</h3>
-                        <p>
-                            엘니뇨·라니냐 예측 프로젝트의 전체 흐름을 정리하고,
-                            데이터 수집, 전처리, 모델 학습, 결과 시각화 방식에 대한 기획 구조를 잡는 데 AI를 활용했습니다.
-                        </p>
-                        <ul>
-                            <li>프로젝트 목적과 필요성 정리</li>
-                            <li>NOAA Niño 데이터 활용 방향 검토</li>
-                            <li>LSTM 기반 시계열 예측 구조 설계 보조</li>
-                            <li>기획서 문장과 구성 보완</li>
-                        </ul>
+            <div class="prompt-category-list">
+
+                <details class="prompt-category" open>
+                    <summary>
+                        <span>01</span>
+                        <strong>기획 및 문제 정의</strong>
+                        <em>반영 위치: 홈, 수행과정, 기획서 요약, 느낀점</em>
+                    </summary>
+
+                    <div class="prompt-table-wrap">
+                        <table class="prompt-table">
+                            <thead>
+                                <tr>
+                                    <th>프롬프트</th>
+                                    <th>AI 제공 결과물</th>
+                                    <th>웹페이지 반영 위치</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>엘니뇨·라니냐 예측을 딥러닝 프로젝트 주제로 선정했어. 이 주제를 실제 프로젝트로 진행하려면 데이터 수집, 전처리, 모델 학습, 결과 시각화 측면에서 어떤 순서로 진행하면 좋을지 알려줘.</td>
+                                    <td>ENSO 예측 프로젝트의 전체 개발 흐름을 데이터 수집, 전처리, LSTM 학습, 평가, 시각화 단계로 정리해 주었다.</td>
+                                    <td>홈의 프로젝트 개요, 수행과정의 초기 개발 흐름</td>
+                                </tr>
+                                <tr>
+                                    <td>현재 작성한 기획서는 초안 수준이야. LSTM 기반 엘니뇨·라니냐 예측 프로젝트의 목적, 데이터, 모델, 기능, 기대 효과가 포함된 기획서 형태로 보완해줘.</td>
+                                    <td>프로젝트 목적, 개발 배경, 데이터 활용 방식, 모델 구조, 기대 효과를 포함한 기획서 구성 방향을 제안해 주었다.</td>
+                                    <td>홈의 프로젝트 설명, 수행과정의 기획 단계 설명</td>
+                                </tr>
+                                <tr>
+                                    <td>이 프로젝트의 사용자는 일반인이 아니라 기상 예측 전문가 또는 기후 데이터 분석가야. 전문가용 예측 도구라는 관점에서 기획서와 기능 설명을 수정해줘.</td>
+                                    <td>일반 사용자 설명을 줄이고, 전문가가 활용할 수 있는 성능 지표, 확률, 그래프 중심의 설명 방향을 제안해 주었다.</td>
+                                    <td>홈의 프로젝트 목적, 실행 결과 해석 문구</td>
+                                </tr>
+                                <tr>
+                                    <td>기획서 내용에 맞게 프로젝트를 단계별로 진행하고 싶어. 데이터 준비부터 모델 학습, 평가, 예측 기능, 웹서비스 확장까지 전체 개발 순서를 정리해줘.</td>
+                                    <td>데이터 준비, 전처리, LSTM 학습, 평가, 특정 월 예측, 비교 실험, 웹서비스 확장 순서의 개발 로드맵을 정리해 주었다.</td>
+                                    <td>수행과정 메뉴의 전체 흐름</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="prompt-category">
+                    <summary>
+                        <span>02</span>
+                        <strong>데이터 처리 및 LSTM 모델 구현</strong>
+                        <em>반영 위치: 코드 설명, 실행 결과, 느낀점</em>
+                    </summary>
+
+                    <div class="prompt-table-wrap">
+                        <table class="prompt-table">
+                            <thead>
+                                <tr>
+                                    <th>프롬프트</th>
+                                    <th>AI 제공 결과물</th>
+                                    <th>웹페이지 반영 위치</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Colab이 아니라 로컬 Python <code>.py</code> 파일 기반으로 프로젝트를 진행하고 싶어. 각 개발 단계를 어떤 파일로 나누어 구성하면 좋을지 알려줘.</td>
+                                    <td>데이터 준비, 모델 학습, 평가, 특정 월 예측, 비교 실험을 단계별 Python 파일로 나누는 구조를 제안해 주었다.</td>
+                                    <td>코드 설명 메뉴의 전체 코드 구조 설명</td>
+                                </tr>
+                                <tr>
+                                    <td>LSTM 모델 평가를 실행한 결과가 나왔어. Accuracy, Balanced Accuracy, Macro F1, Classification Report, 최근 예측 결과를 보고 모델 성능을 어떻게 해석해야 하는지 설명해줘.</td>
+                                    <td>Accuracy만으로 판단하지 않고 Macro F1, Balanced Accuracy, Confusion Matrix를 함께 확인해야 한다는 해석 기준을 설명해 주었다.</td>
+                                    <td>실행 결과 메뉴의 성능 요약, 느낀점의 평가 지표 관련 내용</td>
+                                </tr>
+                                <tr>
+                                    <td>현재 모델 평가까지 완료했어. 기획서 기준으로 다음에 구현해야 할 단계가 무엇인지 알려줘.</td>
+                                    <td>특정 월 예측, lookback 비교, Persistence Baseline 비교, 웹서비스 확장을 다음 개발 단계로 제안해 주었다.</td>
+                                    <td>수행과정 메뉴의 후속 개발 단계</td>
+                                </tr>
+                                <tr>
+                                    <td>특정 월을 입력하면 해당 월의 ENSO 상태를 예측하는 기능을 구현하고 싶어. 직전 lookback 기간을 활용한 예측 구조와 결과 출력 방식을 정리해줘.</td>
+                                    <td>입력 월 기준 직전 lookback 데이터를 사용해 ENSO 상태, 예측 확률, 신뢰도, 실제값 비교 결과를 출력하는 구조를 정리해 주었다.</td>
+                                    <td>코드 설명 메뉴의 특정 월 예측 코드, 실행 결과 메뉴의 예측 결과 이미지</td>
+                                </tr>
+                                <tr>
+                                    <td>6개월, 12개월, 24개월 lookback을 나누어 비교하는 것이 LSTM 모델 학습에 어떤 영향을 주는지 설명해줘.</td>
+                                    <td>Lookback이 LSTM이 참고하는 과거 입력 길이라는 점과, 입력 기간에 따라 단기·중기·장기 패턴 학습이 달라질 수 있다는 설명을 제공해 주었다.</td>
+                                    <td>코드 설명 메뉴의 lookback 비교, 실행 결과 메뉴의 lookback 비교 표</td>
+                                </tr>
+                                <tr>
+                                    <td>교수님 안내 기준에 맞게 Colab에 포함해야 할 핵심 코드를 선별하고 싶어. 지금까지 만든 코드 중 데이터 수집, 전처리, LSTM 학습, 평가, 비교 실험 중심으로 Colab 제출용 코드를 구성해줘.</td>
+                                    <td>FastAPI, Docker, 웹 UI는 제외하고 데이터 수집, 전처리, LSTM 학습, 평가, 특정 월 예측, lookback 비교, baseline 비교 중심으로 Colab 구성을 정리해 주었다.</td>
+                                    <td>실행 결과 메뉴의 Colab 실행 결과, 코드 설명 메뉴</td>
+                                </tr>
+                                <tr>
+                                    <td>작성한 Colab 노트북이 과제 제출용으로 적절한지 확인해줘. 실행 오류 여부, 결과 출력, 그래프, 성능 지표가 잘 정리되었는지 검토해줘.</td>
+                                    <td>노트북 실행 흐름, 출력 결과, 그래프, 성능 수치, 제출용 정리 상태를 점검하고 보완할 부분을 제안해 주었다.</td>
+                                    <td>실행 결과 메뉴의 Colab 결과 검증 내용</td>
+                                </tr>
+                                <tr>
+                                    <td>Lookback 비교 그래프에서 여러 성능 지표가 겹쳐 보여 가독성이 떨어져. 각 지표가 명확히 구분되도록 시각화 코드를 수정해줘.</td>
+                                    <td>선 그래프 대신 그룹 막대그래프를 사용하는 방식의 시각화 코드를 제안해 주었다.</td>
+                                    <td>실행 결과 메뉴의 lookback 비교 그래프</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="prompt-category">
+                    <summary>
+                        <span>03</span>
+                        <strong>GPU 환경 구성 및 오류 해결</strong>
+                        <em>반영 위치: 수행과정, 실행 결과, AI 활용보고서</em>
+                    </summary>
+
+                    <div class="prompt-table-wrap">
+                        <table class="prompt-table">
+                            <thead>
+                                <tr>
+                                    <th>프롬프트</th>
+                                    <th>AI 제공 결과물</th>
+                                    <th>웹페이지 반영 위치</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>현재 LSTM 모델을 CPU로 실행하고 있어. 모델 학습 속도를 개선하기 위해 GPU를 사용할 수 있는지, 어떤 환경 구성이 필요한지 알려줘.</td>
+                                    <td>WSL2 Ubuntu 기반 TensorFlow GPU 환경 구성을 제안하고, GPU 사용을 위해 필요한 설치 조건과 확인 절차를 안내해 주었다.</td>
+                                    <td>수행과정의 GPU 학습 환경 구성, 실행 결과의 GPU 환경 섹션</td>
+                                </tr>
+                                <tr>
+                                    <td>이 프로젝트를 웹서비스로 만들 경우에도 GPU가 필요한지 궁금해. 학습 환경과 배포 환경을 실무에서는 어떻게 분리하는지 설명해줘.</td>
+                                    <td>학습에는 GPU가 유리하지만, 단순 추론 웹서비스는 CPU로도 가능하며 학습 환경과 배포 환경을 분리하는 방식이 일반적이라고 설명해 주었다.</td>
+                                    <td>실행 결과의 GPU 학습 환경 설명, 추가 구현 설명</td>
+                                </tr>
+                                <tr>
+                                    <td>WSL2 Ubuntu를 설치하는 과정에서 가상화 및 Hypervisor 관련 오류가 발생했어. 오류 원인과 해결 순서를 알려줘.</td>
+                                    <td>Windows 가상화 설정, VirtualMachinePlatform, Hypervisor, BIOS 가상화 활성화 여부를 점검하는 순서를 안내해 주었다.</td>
+                                    <td>AI 활용보고서의 오류 해결 및 코드 수정 단계</td>
+                                </tr>
+                                <tr>
+                                    <td>TensorFlow에서 GPU가 인식되지 않고 CPU로 실행되고 있어. GPU 라이브러리 문제를 어떻게 점검하고 해결하면 좋을지 알려줘.</td>
+                                    <td>TensorFlow GPU 확인 코드, CUDA 관련 라이브러리 확인, 가상환경 재설정, <code>nvidia-smi</code> 확인 방법을 제안해 주었다.</td>
+                                    <td>실행 결과의 GPU 확인 이미지, AI 활용보고서의 검증 방식</td>
+                                </tr>
+                                <tr>
+                                    <td>현재 웹서비스 구현이 완료된 상태야. 이 프로젝트를 배포하려면 Docker, GitHub, Render 또는 다른 배포 방식을 어떻게 활용하면 좋을지 알려줘.</td>
+                                    <td>Docker 기반 실행 환경 구성, GitHub 저장소 정리, 배포 플랫폼 선택지의 장단점을 설명해 주었다.</td>
+                                    <td>홈의 추가 구현 내용, 실행 결과의 웹서비스 결과</td>
+                                </tr>
+                                <tr>
+                                    <td>Docker 명령어 실행 과정에서 권한 오류가 발생했어. WSL 환경에서 Docker를 정상적으로 사용하려면 어떤 설정을 확인해야 하는지 알려줘.</td>
+                                    <td>Docker Desktop의 WSL Integration 설정, docker 그룹 권한, 재시작 방법, Docker 명령어 확인 절차를 안내해 주었다.</td>
+                                    <td>수행과정의 Docker 실행 환경 구성, AI 활용보고서의 오류 해결 단계</td>
+                                </tr>
+                                <tr>
+                                    <td>WSL2 Ubuntu 가상환경에서 TensorFlow GPU를 사용해 모델을 학습했어. 이 내용을 포트폴리오의 홈, 수행과정, 실행 결과 메뉴에 자연스럽게 포함할 수 있도록 문구와 코드를 작성해줘.</td>
+                                    <td>WSL2 Ubuntu, <code>.venv_gpu</code>, TensorFlow GPU, <code>nvidia-smi</code> 확인 내용을 홈, 수행과정, 실행 결과 메뉴에 추가하는 HTML/CSS 구성을 제안해 주었다.</td>
+                                    <td>홈의 추가 구현 내용, 수행과정의 GPU 환경 항목, 실행 결과의 GPU 환경 섹션</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="prompt-category">
+                    <summary>
+                        <span>04</span>
+                        <strong>웹서비스 구현 및 코드 정리</strong>
+                        <em>반영 위치: FastAPI API, 웹 대시보드, 코드 설명, 실행 결과</em>
+                    </summary>
+
+                    <div class="prompt-table-wrap">
+                        <table class="prompt-table">
+                            <thead>
+                                <tr>
+                                    <th>프롬프트</th>
+                                    <th>AI 제공 결과물</th>
+                                    <th>웹페이지 반영 위치</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>현재 LSTM 모델 학습과 평가가 완료됐어. 이를 웹서비스로 확장하려면 백엔드, 프론트엔드, API 구조를 어떤 순서로 구성해야 하는지 알려줘.</td>
+                                    <td>FastAPI 기반 백엔드 구조, 모델 로드 방식, 예측 요청 처리 흐름, 프론트엔드와 API를 연결하는 전체 구조를 정리해 주었다.</td>
+                                    <td>코드 설명 메뉴의 FastAPI 구조, 실행 결과 메뉴의 웹서비스 설명</td>
+                                </tr>
+
+                                <tr>
+                                    <td>학습된 LSTM 모델을 웹에서 사용할 수 있도록 예측 API를 만들고 싶어. 입력값, 예측 결과, 신뢰도, 클래스별 확률을 어떤 형태로 반환하면 좋을지 정리해줘.</td>
+                                    <td>예측 월, 예측 상태, 신뢰도, 라니냐·중립·엘니뇨별 확률을 JSON 형태로 반환하는 API 응답 구조를 제안해 주었다.</td>
+                                    <td>코드 설명 메뉴의 예측 API 설명, 실행 결과 메뉴의 웹 대시보드 결과</td>
+                                </tr>
+
+                                <tr>
+                                    <td>웹 대시보드를 HTML, CSS, JavaScript 파일로 분리해서 관리하고 싶어. 각 파일의 역할과 API 호출 흐름을 정리해줘.</td>
+                                    <td>HTML은 화면 구조, CSS는 디자인, JavaScript는 API 호출과 결과 표시를 담당하도록 파일 역할을 나누는 방식을 정리해 주었다.</td>
+                                    <td>코드 설명 메뉴의 프론트엔드 구조 설명</td>
+                                </tr>
+
+                                <tr>
+                                    <td>현재 웹 대시보드의 UI와 UX가 직관적이지 않아. 사용자가 예측 결과, 성능 지표, 그래프를 한눈에 볼 수 있도록 화면 구성을 개선해줘.</td>
+                                    <td>예측 결과 카드, 신뢰도 표시, 성능 요약, 그래프 영역, 해석 안내 영역으로 나누는 카드형 UI 개선 방향을 제안해 주었다.</td>
+                                    <td>실행 결과 메뉴의 웹 대시보드 캡처, 홈의 결과 요약 영역</td>
+                                </tr>
+
+                                <tr>
+                                    <td>코드 설명 메뉴에 넣을 수 있도록 LSTM 모델 학습 코드와 평가 코드의 핵심 흐름을 이해하기 쉽게 정리해줘.</td>
+                                    <td>데이터 입력, 시퀀스 생성, LSTM 모델 구성, 학습, 평가, 결과 저장 순서로 코드 흐름을 설명하는 문장을 정리해 주었다.</td>
+                                    <td>코드 설명 메뉴의 핵심 코드 설명</td>
+                                </tr>
+
+                                <tr>
+                                    <td>내가 작성한 코드에 설명용 주석을 추가하고 싶어. 데이터 전처리, ONI-like 생성, LSTM 입력 생성, 모델 학습 부분을 중심으로 주석 방향을 잡아줘.</td>
+                                    <td>각 코드 블록이 어떤 역할을 하는지 설명할 수 있도록 전처리, 라벨링, 시퀀스 생성, 학습, 평가 단계별 주석 작성 방향을 제안해 주었다.</td>
+                                    <td>코드 설명 메뉴, Colab 제출용 노트북 설명</td>
+                                </tr>
+
+                                <tr>
+                                    <td>웹서비스까지 확장했지만 Colab 제출용 코드에는 어떤 내용을 넣고 어떤 내용은 제외해야 할지 정리해줘.</td>
+                                    <td>Colab에는 데이터 수집, 전처리, LSTM 학습, 평가, 비교 실험을 중심으로 넣고, FastAPI와 Docker는 추가 구현으로 분리하는 방향을 제안해 주었다.</td>
+                                    <td>코드 설명 메뉴, 실행 결과 메뉴의 Colab 정리 내용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="prompt-category">
+                    <summary>
+                        <span>05</span>
+                        <strong>예측 한계, 결과 검증, AI 활용보고서 정리</strong>
+                        <em>반영 위치: 실행 결과, 느낀점, AI 활용보고서</em>
+                    </summary>
+
+                    <div class="prompt-table-wrap">
+                        <table class="prompt-table">
+                            <thead>
+                                <tr>
+                                    <th>프롬프트</th>
+                                    <th>AI 제공 결과물</th>
+                                    <th>웹페이지 반영 위치</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>현재 서비스가 관측 데이터가 있는 월까지만 예측할 수 있어. 현재 월 이후의 미래 ENSO 상태를 예측하려면 어떤 구조가 추가로 필요한지 설명해줘.</td>
+                                    <td>기존 모델은 미래 입력 feature가 없으면 예측이 어렵다는 한계를 설명하고, Feature Forecaster 기반 확장 구조를 제안해 주었다.</td>
+                                    <td>느낀점의 한계점, 실행 결과의 웹서비스 확장 설명</td>
+                                </tr>
+                                <tr>
+                                    <td>ENSO 예측에는 불확실성과 한계가 있지만, 딥러닝을 통해 기존 한계를 개선할 수 있다면 도입 가치가 있는지 검토해줘.</td>
+                                    <td>딥러닝이 한계를 완전히 제거하지는 못하지만, baseline보다 높은 성능과 확률 기반 예측을 제공한다면 분석 보조 도구로 가치가 있다고 설명해 주었다.</td>
+                                    <td>느낀점의 최종 성찰, 홈의 프로젝트 의의</td>
+                                </tr>
+                                <tr>
+                                    <td>미래 예측 결과의 신뢰도가 낮게 나왔어. 이 결과가 모델 오류인지, 장기 예측에서 자연스럽게 나타나는 불확실성인지 설명해줘.</td>
+                                    <td>장기 예측에서는 feature 예측 오차가 누적되어 신뢰도가 낮아질 수 있으며, 이를 오류가 아니라 불확실성 정보로 해석해야 한다고 설명해 주었다.</td>
+                                    <td>느낀점의 한계점, 실행 결과 해석 문구</td>
+                                </tr>
+                                <tr>
+                                    <td>포트폴리오에 AI 활용보고서 메뉴를 추가하려고 해. AI 활용 목적, 도움을 받은 부분, 직접 수행한 부분, 검증 방식, 한계와 활용 원칙을 포함해 구성해줘.</td>
+                                    <td>AI 활용 개요, 단계별 활용 내용, AI 도움을 받은 부분과 직접 수행한 부분, 검증 방식, 한계, 활용 원칙을 포함한 보고서 구조를 제공해 주었다.</td>
+                                    <td>AI 활용보고서 메뉴 전체 구조</td>
+                                </tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <section class="ai-report-block">
+            <div class="section-heading left-heading">
+                <span>SCOPE & RESPONSIBILITY</span>
+                <h2>AI 활용 범위와 본인 수행 기준</h2>
+                <p>
+                    위의 프롬프트 기록을 바탕으로 AI를 어떤 부분에 보조적으로 활용했는지와
+                    최종적으로 직접 수행한 작업을 구분하여 정리했습니다.
+                    AI는 프로젝트를 대신 수행한 것이 아니라, 개발 과정에서 정리·검토·보완 도구로 활용되었습니다.
+                </p>
+            </div>
+
+            <div class="ai-scope-grid">
+
+                <article class="ai-scope-card">
+                    <span>01</span>
+                    <h3>기획 및 문제 정의</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>아이디어를 프로젝트 흐름, 기획서 구조, 사용자 대상 설명으로 정리하는 데 활용했습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>엘니뇨·라니냐 예측이라는 주제 선정, 프로젝트 방향 설정, 전문가용 도구라는 사용자 대상 결정은 직접 수행했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">02</div>
-                    <div class="ai-step-content">
-                        <h3>데이터 전처리 단계</h3>
-                        <p>
-                            NOAA 원본 데이터에서 필요한 컬럼을 추출하고,
-                            ONI-like 지표를 생성한 뒤 라니냐·중립·엘니뇨 라벨을 만드는 코드 구조를 정리하는 데 도움을 받았습니다.
-                        </p>
-                        <ul>
-                            <li>연도·월 데이터를 날짜 형식으로 변환하는 방식 검토</li>
-                            <li>Niño anomaly feature 정리 방식 검토</li>
-                            <li>ONI-like 지표 생성 코드 구조화</li>
-                            <li>라벨링 기준 설명 문장 보완</li>
-                        </ul>
+                <article class="ai-scope-card">
+                    <span>02</span>
+                    <h3>코드 구조 및 설명 정리</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>Python 파일 구조, 코드 흐름, 핵심 코드 설명, 주석 보완 방향을 정리하는 데 활용했습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>데이터 다운로드, 전처리, LSTM 학습, 평가 코드 실행과 결과 파일 생성은 직접 진행했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">03</div>
-                    <div class="ai-step-content">
-                        <h3>LSTM 모델 구현 단계</h3>
-                        <p>
-                            LSTM 입력 시퀀스 구성, 모델 구조 설계, EarlyStopping 적용, class weight 적용 등
-                            모델 학습 코드의 흐름을 구성하는 데 AI의 도움을 받았습니다.
-                        </p>
-                        <ul>
-                            <li>lookback 기반 입력 데이터 생성 방식 정리</li>
-                            <li>LSTM, Dropout, Dense 층 구성 검토</li>
-                            <li>학습·검증·테스트 데이터 분할 방식 확인</li>
-                            <li>데이터 누수 방지를 위한 scaler 적용 방식 검토</li>
-                        </ul>
+                <article class="ai-scope-card">
+                    <span>03</span>
+                    <h3>오류 해결 방향 검토</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>WSL2, TensorFlow GPU, Docker, FastAPI 실행 오류에 대해 원인 후보와 점검 순서를 확인했습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>실제 명령어 실행, 가상환경 구성, GPU 인식 확인, 서버 실행 확인은 직접 수행했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">04</div>
-                    <div class="ai-step-content">
-                        <h3>성능 평가 및 비교 실험 단계</h3>
-                        <p>
-                            Accuracy만으로 모델을 평가하는 한계를 보완하기 위해 Macro F1-score,
-                            Balanced Accuracy, Confusion Matrix 등을 함께 사용하는 방향을 정리했습니다.
-                            또한 Persistence Baseline 비교와 lookback 비교 실험 구성을 검토했습니다.
-                        </p>
-                        <ul>
-                            <li>평가 지표 선정 이유 정리</li>
-                            <li>Confusion Matrix 해석 방식 보완</li>
-                            <li>6개월·12개월·24개월 lookback 비교 실험 구성</li>
-                            <li>Persistence Baseline과 LSTM 비교 문장 정리</li>
-                        </ul>
+                <article class="ai-scope-card">
+                    <span>04</span>
+                    <h3>성능 평가 및 결과 해석</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>Accuracy, Macro F1, Confusion Matrix, baseline 비교 결과를 어떻게 설명할지 검토했습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>Colab과 로컬 실행 결과를 기준으로 실제 성능 수치와 그래프를 확인하고, 포트폴리오에 반영했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">05</div>
-                    <div class="ai-step-content">
-                        <h3>오류 해결 및 코드 수정 단계</h3>
-                        <p>
-                            Colab, WSL, Docker, FastAPI 실행 과정에서 발생한 오류 메시지를 바탕으로
-                            원인 후보를 정리하고 해결 순서를 잡는 데 AI를 활용했습니다.
-                        </p>
-                        <ul>
-                            <li>TensorFlow GPU 실행 환경 점검 방향 확인</li>
-                            <li>WSL2 Ubuntu와 TensorFlow GPU 환경 구성 과정에서 발생한 문제 해결 방향 검토</li>
-                            <li>GPU 인식 여부 확인을 위한 gpu_check.py와 nvidia-smi 실행 결과 검토</li>
-                            <li>FastAPI 서버 실행 오류 원인 검토</li>
-                            <li>Docker 권한 문제 해결 순서 확인</li>
-                            <li>그래프 가독성 문제 해결을 위한 시각화 코드 수정</li>
-                        </ul>
+                <article class="ai-scope-card">
+                    <span>05</span>
+                    <h3>웹서비스 및 포트폴리오 구성</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>FastAPI, HTML/CSS/JS 포트폴리오 메뉴 구성, 화면 배치, 문장 정리에 도움을 받았습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>실제 파일 수정, 이미지 연결, 성능 수치 교체, 페이지 구성 확인은 직접 진행했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
-                <article class="ai-step-item">
-                    <div class="ai-step-number">06</div>
-                    <div class="ai-step-content">
-                        <h3>웹서비스 및 포트폴리오 구성 단계</h3>
-                        <p>
-                            추가 구현으로 FastAPI API, 웹 대시보드, Docker 실행 환경을 구성하고,
-                            오픈포트폴리오에 들어갈 메뉴와 내용을 정리하는 데 AI를 활용했습니다.
-                        </p>
-                        <ul>
-                            <li>FastAPI API 구성 방향 정리</li>
-                            <li>웹 대시보드 화면 구성 보완</li>
-                            <li>Docker 배포용 파일 구성 검토</li>
-                            <li>포트폴리오 메뉴별 내용 작성 보조</li>
-                        </ul>
+                <article class="ai-scope-card">
+                    <span>06</span>
+                    <h3>제출 자료 구성</h3>
+                    <div class="scope-compare">
+                        <div>
+                            <strong>AI 활용</strong>
+                            <p>Colab 제출용 코드와 GitHub 추가 구현을 어떻게 구분할지 검토하는 데 활용했습니다.</p>
+                        </div>
+                        <div>
+                            <strong>직접 수행</strong>
+                            <p>최종 제출 파일 선택, Colab 결과 확인, GitHub 정리, 포트폴리오 반영 여부는 직접 판단했습니다.</p>
+                        </div>
                     </div>
                 </article>
 
@@ -2361,209 +2621,80 @@
 
         <section class="ai-report-block">
             <div class="section-heading left-heading">
-                <span>DIVISION</span>
-                <h2>AI 도움을 받은 부분과 직접 수행한 부분</h2>
+                <span>VALIDATION & PRINCIPLE</span>
+                <h2>AI 결과 검증 및 활용 원칙</h2>
+                <p>
+                    AI가 제공한 답변은 참고 자료로만 사용했고,
+                    실제 프로젝트에 반영하기 전에는 실행 결과와 과제 기준에 맞는지 직접 확인했습니다.
+                </p>
             </div>
 
-            <div class="ai-division-table-wrap">
-                <table class="ai-division-table">
-                    <thead>
-                        <tr>
-                            <th>구분</th>
-                            <th>AI 도움을 받은 부분</th>
-                            <th>직접 수행한 부분</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>기획</td>
-                            <td>기획서 구조, 프로젝트 흐름, 설명 문장 정리</td>
-                            <td>주제 선정, 프로젝트 방향 결정, 사용자 대상 설정</td>
-                        </tr>
-                        <tr>
-                            <td>데이터 처리</td>
-                            <td>전처리 코드 구조와 라벨링 기준 설명 보완</td>
-                            <td>Colab에서 데이터 다운로드, 실행 결과 확인, 전처리 결과 검토</td>
-                        </tr>
-                        <tr>
-                            <td>모델 구현</td>
-                            <td>LSTM 코드 구조, EarlyStopping, class weight 적용 방향 검토</td>
-                            <td>모델 학습 실행, 성능 결과 확인, 최종 모델 구성 판단</td>
-                        </tr>
-                        <tr>
-                            <td>평가</td>
-                            <td>평가 지표 의미, baseline 비교 방식 정리</td>
-                            <td>실제 성능 수치 확인, 그래프 출력, 결과 해석 작성</td>
-                        </tr>
-                        <tr>
-                            <td>오류 해결</td>
-                            <td>오류 메시지 원인 분석과 해결 순서 제안</td>
-                            <td>명령어 실행, 환경 설정 변경, 정상 동작 여부 확인</td>
-                        </tr>
-                        <tr>
-                            <td>웹서비스</td>
-                            <td>FastAPI, Docker, 포트폴리오 코드 구조 정리</td>
-                            <td>로컬 실행 확인, Docker 빌드 테스트, 제출 자료 구성</td>
-                        </tr>
-                        <tr>
-                            <td>문서화</td>
-                            <td>문장 다듬기, 메뉴 구성, 보고서 초안 작성 보조</td>
-                            <td>프로젝트 내용 반영, 최종 문구 선택, 제출 형식 정리</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            <div class="ai-check-grid">
 
-        <section class="ai-report-block">
-            <div class="section-heading left-heading">
-                <span>VALIDATION</span>
-                <h2>AI 결과 검증 방식</h2>
-            </div>
-
-            <div class="validation-grid">
-                <article>
+                <article class="ai-check-card">
                     <span>01</span>
                     <h3>직접 실행 확인</h3>
                     <p>
-                        AI가 제안한 코드는 Colab, WSL, 로컬 Docker 환경에서 직접 실행하여 오류 여부를 확인했습니다.
-                        실행되지 않는 코드는 수정하거나 프로젝트 상황에 맞게 제외했습니다.
+                        AI가 제안한 코드나 수정 방향은 Colab, WSL2 Ubuntu, 로컬 Docker 환경에서 직접 실행하여 오류 여부를 확인했습니다.
                     </p>
                 </article>
 
-                <article>
+                <article class="ai-check-card">
                     <span>02</span>
-                    <h3>결과 수치 확인</h3>
+                    <h3>결과 수치 재검증</h3>
                     <p>
-                        성능 지표는 AI가 임의로 작성한 값이 아니라,
-                        실제 Colab 실행 결과에서 출력된 Accuracy, Macro F1-score, Baseline 결과를 기준으로 정리했습니다.
+                        모델 성능 수치는 AI가 작성한 값이 아니라, 실제 Colab 실행 결과에서 출력된 Accuracy, Macro F1, baseline 결과를 기준으로 정리했습니다.
                     </p>
                 </article>
 
-                <article>
+                <article class="ai-check-card">
                     <span>03</span>
-                    <h3>프로젝트 목적과 비교</h3>
+                    <h3>과제 기준에 맞게 분리</h3>
                     <p>
-                        AI가 제안한 기능이나 문장이 프로젝트 목적과 맞지 않는 경우 수정했습니다.
-                        특히 Colab에는 핵심 학습 코드만 포함하고, 웹서비스 코드는 GitHub 추가 구현으로 분리했습니다.
+                        Colab에는 핵심 모델 학습 및 평가 코드를 포함하고, FastAPI, Docker, 웹 대시보드는 GitHub 추가 구현으로 분리했습니다.
                     </p>
                 </article>
 
-                <article>
+                <article class="ai-check-card">
                     <span>04</span>
-                    <h3>표현 수정</h3>
+                    <h3>표현과 코드 직접 수정</h3>
                     <p>
-                        AI가 작성한 문장을 그대로 사용하지 않고,
-                        실제 수행 과정과 결과에 맞게 문장 표현을 수정했습니다.
-                        과장된 표현은 줄이고, 직접 확인한 내용 중심으로 정리했습니다.
+                        AI가 제안한 문장과 코드는 그대로 사용하지 않고, 실제 수행 과정과 프로젝트 구조에 맞게 수정한 뒤 반영했습니다.
                     </p>
                 </article>
-            </div>
-        </section>
 
-        <section class="ai-report-block">
-            <div class="section-heading left-heading">
-                <span>LIMITATION</span>
-                <h2>AI 활용의 한계와 주의한 점</h2>
             </div>
 
-            <div class="ai-limitation-box">
+            <div class="ai-caution-box">
+                <strong>AI 활용 시 주의한 점</strong>
                 <ul>
-                    <li>
-                        AI가 제안한 코드가 항상 현재 프로젝트 구조와 정확히 맞는 것은 아니기 때문에,
-                        파일 경로, 변수명, 실행 환경은 직접 확인하고 수정했습니다.
-                    </li>
-                    <li>
-                        AI가 설명한 성능 해석은 참고용으로만 사용하고,
-                        실제 판단은 Colab에서 출력된 결과와 그래프를 기준으로 했습니다.
-                    </li>
-                    <li>
-                        모델 성능 수치나 그래프 결과는 AI가 생성한 값이 아니라,
-                        직접 실행한 결과를 바탕으로 포트폴리오에 반영했습니다.
-                    </li>
-                    <li>
-                        AI가 제안한 추가 기능 중 과제 범위를 벗어나거나 제출 기준과 맞지 않는 부분은 제외했습니다.
-                    </li>
-                    <li>
-                        AI는 보조 도구로 활용했으며, 최종 제출물의 구성과 내용 선택은 직접 결정했습니다.
-                    </li>
+                    <li>파일 경로, 변수명, 실행 환경은 직접 확인하고 수정했습니다.</li>
+                    <li>성능 해석은 참고용으로만 사용하고, 실제 판단은 실행 결과와 그래프를 기준으로 했습니다.</li>
+                    <li>과제 범위를 벗어나거나 제출 기준과 맞지 않는 기능은 제외하거나 GitHub 추가 구현으로 분리했습니다.</li>
+                    <li>직접 이해하고 설명할 수 있는 코드와 결과만 포트폴리오에 반영했습니다.</li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="ai-report-block">
-            <div class="section-heading left-heading">
-                <span>PRINCIPLE</span>
-                <h2>AI 활용 원칙</h2>
-            </div>
-
-            <div class="ai-principle-grid">
-                <article>
-                    <strong>원칙 1</strong>
-                    <h3>그대로 제출하지 않기</h3>
-                    <p>AI가 제안한 코드와 문장은 실제 실행 결과와 프로젝트 상황에 맞게 수정한 뒤 사용했습니다.</p>
-                </article>
-
-                <article>
-                    <strong>원칙 2</strong>
-                    <h3>실행 결과 기준으로 판단하기</h3>
-                    <p>모델 성능과 그래프 해석은 AI의 설명이 아니라 Colab 실행 결과를 기준으로 작성했습니다.</p>
-                </article>
-
-                <article>
-                    <strong>원칙 3</strong>
-                    <h3>과제 기준에 맞게 분리하기</h3>
-                    <p>Colab에는 핵심 모델 학습 코드를 넣고, FastAPI와 Docker는 GitHub 추가 구현으로 분리했습니다.</p>
-                </article>
-
-                <article>
-                    <strong>원칙 4</strong>
-                    <h3>직접 이해한 내용만 반영하기</h3>
-                    <p>설명할 수 없는 코드는 제외하거나 다시 확인했고, 코드 설명은 직접 이해한 범위에서 정리했습니다.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="ai-report-block">
-            <div class="section-heading left-heading">
-                <span>FINAL CONTRIBUTION</span>
-                <h2>최종 본인 기여도</h2>
-            </div>
-
-            <div class="contribution-box">
-                <div class="contribution-percent">
-                    <strong>100%</strong>
-                    <span>개인 프로젝트 수행</span>
-                </div>
-
-                <div class="contribution-text">
-                    <h3>최종 결과물의 구성과 판단은 직접 수행했습니다.</h3>
-                    <p>
-                        본 프로젝트는 개인 프로젝트로 진행되었으며,
-                        데이터 실행, 모델 학습, 결과 확인, 성능 비교, 최종 제출 자료 정리는 직접 수행했습니다.
-                        AI는 코드 구조 정리, 오류 원인 검토, 문서 표현 보완에 도움을 주는 보조 도구로 활용했습니다.
-                    </p>
-                    <p>
-                        특히 최종 Colab 노트북에 어떤 코드를 포함할지, GitHub에 어떤 추가 구현을 정리할지,
-                        포트폴리오에서 어떤 결과를 강조할지는 직접 판단했습니다.
-                        따라서 AI는 개발 과정의 참고 도구였으며, 최종 결과물에 대한 책임과 판단은 본인이 수행했습니다.
-                    </p>
-                </div>
             </div>
         </section>
 
         <section class="ai-final-report">
             <h2>AI 활용 최종 정리</h2>
+
             <p>
-                본 프로젝트에서 AI는 개발과 문서화의 보조 도구로 활용되었습니다.
-                AI를 통해 코드 구조를 더 빠르게 정리하고, 오류 해결 방향을 검토하며,
-                포트폴리오와 보고서 문장을 체계화할 수 있었습니다.
+                본 프로젝트에서 AI는 개발을 대신 수행하는 도구가 아니라,
+                프로젝트 진행 과정에서 필요한 내용을 정리하고 검토하는 보조 도구로 활용했습니다.
             </p>
+
             <p>
-                그러나 AI가 제시한 결과를 그대로 제출하지 않고,
-                실제 Colab 실행 결과, 모델 성능 지표, 그래프 출력, 웹서비스 동작 여부를 직접 확인했습니다.
-                이를 통해 AI를 단순한 답안 생성 도구가 아니라,
-                프로젝트 완성도를 높이기 위한 검토 및 보조 도구로 활용했습니다.
+                주요 활용 범위는 코드 흐름 정리, 주석 및 설명 보완, 오류 원인 검토,
+                성능 지표 해석 방식 정리, 포트폴리오 문장 구성 보완이었습니다.
+                특히 모델 학습이나 실행 과정에서 발생한 문제를 해결할 때,
+                AI의 답변을 참고하여 원인 후보와 점검 순서를 빠르게 정리할 수 있었습니다.
+            </p>
+
+            <p>
+                다만 AI가 제안한 내용은 그대로 사용하지 않고,
+                실제 실행 결과, 파일 경로, 성능 수치, 그래프 출력 여부, 과제 제출 기준에 맞는지 확인한 뒤 필요한 부분만 반영했습니다.
+                이를 통해 AI를 단순한 답안 생성 도구가 아니라, 프로젝트 완성도를 높이기 위한 정리·검토 도구로 활용했습니다.
             </p>
         </section>
 

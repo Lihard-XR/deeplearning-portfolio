@@ -1685,9 +1685,12 @@ main {
     }
 }
 
-/* =========================
+/* =========================================================
    AI Usage Report Page
-========================= */
+   - 개요 / 목적 / 프롬프트 로그 / 책임 범위 / 검증 원칙 / 최종 정리
+========================================================= */
+
+/* ---------- AI Page Base ---------- */
 
 .ai-report-section {
     padding: 64px 0 90px;
@@ -1725,6 +1728,8 @@ main {
     font-size: 14px;
 }
 
+/* ---------- AI Purpose ---------- */
+
 .ai-purpose-card {
     padding: 34px;
     border-radius: 28px;
@@ -1753,268 +1758,325 @@ main {
     margin-bottom: 0;
 }
 
-.ai-step-list {
+/* ---------- Prompt Log Guide ---------- */
+
+.prompt-guide-box {
+    padding: 24px;
+    border-radius: 22px;
+    background:
+        linear-gradient(135deg, rgba(69, 184, 134, 0.12), rgba(255, 255, 255, 1)),
+        #ffffff;
+    border: 1px solid rgba(69, 184, 134, 0.25);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+    margin-bottom: 22px;
+}
+
+.prompt-guide-box strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--green-dark);
+    font-size: 18px;
+}
+
+.prompt-guide-box p {
+    margin: 0;
+    color: #475467;
+    line-height: 1.8;
+}
+
+/* ---------- Prompt Accordion ---------- */
+
+.prompt-category-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.ai-step-item {
-    display: grid;
-    grid-template-columns: 86px 1fr;
     gap: 18px;
-    align-items: stretch;
 }
 
-.ai-step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 110px;
-    border-radius: 22px;
-    background: var(--green-dark);
-    color: white;
-    font-size: 24px;
-    font-weight: 900;
-    box-shadow: 0 12px 28px rgba(15, 75, 63, 0.16);
-}
-
-.ai-step-content {
-    padding: 28px;
+.prompt-category {
     border-radius: 24px;
     background: white;
     border: 1px solid var(--line);
     box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
+    overflow: hidden;
 }
 
-.ai-step-content h3 {
-    margin: 0 0 12px;
+.prompt-category summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 76px 22px 24px;
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 12px 18px;
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(69, 184, 134, 0.11), rgba(255, 255, 255, 1)),
+        #ffffff;
+    position: relative;
+}
+
+.prompt-category summary::-webkit-details-marker {
+    display: none;
+}
+
+.prompt-category summary::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--green-dark);
+    transition: background 0.25s ease;
+    z-index: 1;
+}
+
+.prompt-category summary::before {
+    content: "";
+    position: absolute;
+    right: 37px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    clip-path: polygon(25% 0, 100% 50%, 25% 100%, 25% 72%, 65% 50%, 25% 28%);
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+    z-index: 2;
+}
+
+.prompt-category[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.prompt-category[open] summary::after,
+.prompt-category summary:hover::after {
+    background: var(--green);
+}
+
+.prompt-category summary span {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--green-dark);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.prompt-category summary strong {
     color: var(--navy);
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: -0.4px;
 }
 
-.ai-step-content p {
-    margin: 0 0 14px;
+.prompt-category summary em {
+    grid-column: 2;
     color: var(--muted);
-    line-height: 1.8;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.ai-step-content ul {
-    margin: 0;
-    padding-left: 20px;
-    color: #344054;
-    line-height: 1.8;
-}
+/* ---------- Prompt Table ---------- */
 
-.ai-step-content li::marker {
-    color: var(--green);
-}
-
-.ai-division-table-wrap {
+.prompt-table-wrap {
     overflow-x: auto;
-    border-radius: 24px;
-    background: white;
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
+    border-top: 1px solid var(--line);
 }
 
-.ai-division-table {
+.prompt-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 860px;
+    min-width: 980px;
 }
 
-.ai-division-table th,
-.ai-division-table td {
-    padding: 17px 18px;
+.prompt-table th,
+.prompt-table td {
+    padding: 16px 18px;
     border-bottom: 1px solid var(--line);
     text-align: left;
     vertical-align: top;
+    line-height: 1.7;
 }
 
-.ai-division-table th {
-    background: var(--green-soft);
+.prompt-table th {
+    background: #f8fafc;
     color: var(--green-dark);
     font-weight: 900;
 }
 
-.ai-division-table td {
+.prompt-table td {
     color: #344054;
-    line-height: 1.7;
+    font-size: 14px;
 }
 
-.ai-division-table td:first-child {
-    font-weight: 900;
+.prompt-table td:first-child {
+    width: 42%;
     color: var(--navy);
-    width: 130px;
+    font-weight: 700;
 }
 
-.ai-division-table tr:last-child td {
+.prompt-table td:nth-child(2) {
+    width: 34%;
+}
+
+.prompt-table td:nth-child(3) {
+    width: 24%;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.prompt-table tr:last-child td {
     border-bottom: none;
 }
 
-.validation-grid {
+.prompt-table code {
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+/* ---------- AI Scope & Responsibility ---------- */
+
+.ai-scope-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
-.validation-grid article {
-    padding: 28px;
+.ai-scope-card {
+    padding: 26px;
     border-radius: 24px;
     background: white;
     border: 1px solid var(--line);
     box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
 }
 
-.validation-grid span {
+.ai-scope-card > span {
     display: inline-flex;
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
     align-items: center;
     justify-content: center;
     border-radius: 14px;
     background: var(--green-soft);
     color: var(--green-dark);
     font-weight: 900;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
-.validation-grid h3 {
-    margin: 0 0 12px;
+.ai-scope-card h3 {
+    margin: 0 0 16px;
     color: var(--navy);
     font-size: 23px;
 }
 
-.validation-grid p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.8;
+.scope-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
 }
 
-.ai-limitation-box {
-    padding: 30px;
-    border-radius: 26px;
-    background: white;
+.scope-compare div {
+    padding: 18px;
+    border-radius: 18px;
+    background: #f8fafc;
     border: 1px solid var(--line);
-    box-shadow: var(--shadow);
 }
 
-.ai-limitation-box ul {
+.scope-compare strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green-dark);
+    font-size: 15px;
+}
+
+.scope-compare p {
     margin: 0;
-    padding-left: 22px;
     color: #475467;
-    line-height: 1.9;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
-.ai-limitation-box li {
-    margin-bottom: 10px;
-}
+/* ---------- AI Validation & Principle ---------- */
 
-.ai-limitation-box li:last-child {
-    margin-bottom: 0;
-}
-
-.ai-limitation-box li::marker {
-    color: var(--green);
-}
-
-.ai-principle-grid {
+.ai-check-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
+    margin-bottom: 24px;
 }
 
-.ai-principle-grid article {
+.ai-check-card {
     padding: 24px;
     border-radius: 22px;
-    background:
-        linear-gradient(135deg, rgba(69, 184, 134, 0.08), rgba(255, 255, 255, 1)),
-        #ffffff;
-    border: 1px solid rgba(69, 184, 134, 0.22);
+    background: white;
+    border: 1px solid var(--line);
     box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
 }
 
-.ai-principle-grid strong {
-    display: inline-block;
-    margin-bottom: 12px;
-    padding: 7px 12px;
-    border-radius: 999px;
+.ai-check-card span {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
     background: var(--green-soft);
     color: var(--green-dark);
-    font-size: 13px;
     font-weight: 900;
+    margin-bottom: 14px;
 }
 
-.ai-principle-grid h3 {
+.ai-check-card h3 {
     margin: 0 0 10px;
     color: var(--navy);
     font-size: 20px;
 }
 
-.ai-principle-grid p {
+.ai-check-card p {
     margin: 0;
     color: var(--muted);
     line-height: 1.7;
     font-size: 14px;
 }
 
-.contribution-box {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 26px;
-    align-items: stretch;
+.ai-caution-box {
+    padding: 28px;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg, rgba(69, 184, 134, 0.10), rgba(255, 255, 255, 1)),
+        #ffffff;
+    border: 1px solid rgba(69, 184, 134, 0.22);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06);
 }
 
-.contribution-percent {
-    border-radius: 28px;
-    background: var(--green-dark);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 14px 34px rgba(15, 75, 63, 0.18);
-    padding: 30px;
+.ai-caution-box strong {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--green-dark);
+    font-size: 20px;
 }
 
-.contribution-percent strong {
-    font-size: 62px;
-    line-height: 1;
-    letter-spacing: -2px;
-}
-
-.contribution-percent span {
-    margin-top: 12px;
-    color: rgba(255, 255, 255, 0.78);
-    font-weight: 800;
-}
-
-.contribution-text {
-    padding: 32px;
-    border-radius: 28px;
-    background: white;
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-}
-
-.contribution-text h3 {
-    margin: 0 0 14px;
-    color: var(--navy);
-    font-size: 27px;
-    letter-spacing: -0.5px;
-}
-
-.contribution-text p {
-    margin: 0 0 14px;
-    color: var(--muted);
+.ai-caution-box ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #475467;
     line-height: 1.85;
 }
 
-.contribution-text p:last-child {
-    margin-bottom: 0;
+.ai-caution-box li::marker {
+    color: var(--green);
 }
+
+/* ---------- AI Final Report ---------- */
 
 .ai-final-report {
     padding: 42px;
@@ -2040,58 +2102,88 @@ main {
     margin-bottom: 0;
 }
 
+/* ---------- AI Page Responsive ---------- */
+
 @media (max-width: 980px) {
-    .ai-summary-grid,
-    .ai-principle-grid {
+    .ai-summary-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .validation-grid {
+    .ai-scope-grid {
         grid-template-columns: 1fr;
     }
 
-    .contribution-box {
-        grid-template-columns: 1fr;
+    .ai-check-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .contribution-percent {
-        min-height: 180px;
+    .ai-final-layout {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 640px) {
     .ai-summary-grid,
-    .ai-principle-grid {
+    .ai-check-grid {
         grid-template-columns: 1fr;
-    }
-
-    .ai-step-item {
-        grid-template-columns: 1fr;
-    }
-
-    .ai-step-number {
-        min-height: auto;
-        padding: 16px;
-        justify-content: flex-start;
     }
 
     .ai-purpose-card,
-    .ai-limitation-box,
-    .contribution-text,
-    .ai-final-report {
-        padding: 26px;
+    .ai-final-report,
+    .ai-scope-card,
+    .ai-check-card,
+    .ai-caution-box {
+        padding: 22px;
     }
 
     .ai-purpose-card h3 {
         font-size: 23px;
     }
 
-    .contribution-percent strong {
-        font-size: 48px;
+    .prompt-category summary {
+        grid-template-columns: 1fr;
+        padding: 20px 66px 20px 20px;
+    }
+
+    .prompt-category summary::after {
+        right: 20px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .prompt-category summary::before {
+        right: 31px;
+        width: 11px;
+        height: 11px;
+    }
+
+    .prompt-category summary em {
+        grid-column: 1;
+    }
+
+    .prompt-category summary span {
+        width: 42px;
+        height: 42px;
+    }
+
+    .prompt-category summary strong {
+        font-size: 19px;
+    }
+
+    .scope-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-final-report {
+        padding: 26px;
     }
 
     .ai-final-report h2 {
         font-size: 28px;
+    }
+
+    .ai-final-percent strong {
+        font-size: 46px;
     }
 }
 
