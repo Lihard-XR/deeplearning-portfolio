@@ -64,7 +64,50 @@
                     <li><strong>모델</strong><span>LSTM 3분류 모델</span></li>
                     <li><strong>예측 대상</strong><span>라니냐 / 중립 / 엘니뇨</span></li>
                     <li><strong>추가 구현</strong><span>FastAPI · 웹 대시보드 · Docker</span></li>
+                    <li><strong>SDG 연계</strong><span>SDG 13 기후행동</span></li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="sdg-section">
+            <div class="section-heading left-heading">
+                <span>SDGs CONNECTION</span>
+                <h2>SDG 13 기후행동과의 연관성</h2>
+                <p>
+                    본 프로젝트는 SDG 13 기후행동과 연관됩니다. 엘니뇨와 라니냐는 해수면 온도 변화에 따라
+                    발생하는 대표적인 기후 현상으로, 가뭄, 폭우, 농업 피해, 해양 생태계 변화 등 다양한
+                    이상기후 문제와 연결됩니다.
+                </p>
+            </div>
+
+            <div class="sdg-card-grid">
+                <article class="sdg-card main-sdg-card">
+                    <span>SDG 13</span>
+                    <h3>기후행동</h3>
+                    <p>
+                        엘니뇨·라니냐 상태를 조기에 예측하면 이상기후에 대한 사전 대응과 위험 관리에 도움을 줄 수 있습니다.
+                        따라서 ENSO 상태 예측은 기후 변화 대응과 재난 피해 완화라는 측면에서 SDG 13의 목표와 연결됩니다.
+                    </p>
+                </article>
+
+                <article class="sdg-card">
+                    <span>문제 정의</span>
+                    <h3>기후 시계열 변화 예측</h3>
+                    <p>
+                        ENSO 상태는 한 시점의 값만으로 판단하기보다 여러 달 동안의 해수면 온도 편차 흐름을 함께 보아야 합니다.
+                        이 프로젝트에서는 NOAA Niño 지표와 ONI-like 값을 활용해 시간에 따른 상태 변화를 분석했습니다.
+                    </p>
+                </article>
+
+                <article class="sdg-card">
+                    <span>딥러닝 필요성</span>
+                    <h3>왜 LSTM을 사용하는가</h3>
+                    <p>
+                        엘니뇨·라니냐는 월별 지표의 연속적인 변화 패턴이 중요하므로, 과거 입력 구간의 흐름을 학습할 수 있는
+                        LSTM 모델을 사용했습니다. 이를 통해 단순 기준값 판단이나 이전 상태 유지 방식보다 시계열 패턴을 반영한
+                        예측을 수행할 수 있습니다.
+                    </p>
+                </article>
             </div>
         </section>
 
